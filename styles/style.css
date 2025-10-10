@@ -10,31 +10,76 @@
         --header-bg-color: light-dark(#3B3E40, #3B3E40);
         --header-text-color: light-dark(#fff, #fff);
         --primary-color: light-dark(#66D4D4, #3e8a8a);
-        --secondary-color:(#FFF, #fff);
+        --secondary-color: (#FFF, #fff);
         --text-color: light-dark(#000, #fff);
         --bg-color: light-dark(#fff, #000)
     }
+
+    h1 {
+        font-size: 4rem;
+        font-weight: extra-bold;
+    }
+    
+    .img-fluid {
+        display: block;
+        height: auto;
+        width: auto;
+
+    }
+
     html {
         font-family: "Open Sans", sans-serif;
         font-size: 100%;
         color: var(--text-color);
     }
+
     body {
         background-color: var(--bg-color);
     }
-    .header{
+    
+    main {
+        padding: 1rem;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .header {
         background-image: url("../images/header-2560w.webp");
         background-size: cover;
         background-position: top left;
         background-color: var(--header-bg-color);
         color: var(--header-text-color);
         line-height: 1.5;
+        padding: 1em;
     }
-    .header__nav{
+
+    .header__nav {
         text-align: center;
     }
-    .header__link{
+
+    .header__link {
         text-align: center;
         padding-top: 1em;
     }
+    .header__intro{
+        margin-top: 10vh;
+    }
+    .button {
+        display: block;
+        border-radius: 0.5rem;
+        padding: 0.75em 2em;
+        text-decoration: none;
+    }
+    .button--light{
+        background-color: var(--text-color);
+        color: var(--text-color);
+    }
+    .img-block {
+        margin: 0;
+    }
+    .img-block__caption {
+        text-align: center;
+        margin-top: 0.5em;
+    }
+    
 }
