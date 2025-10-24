@@ -5,459 +5,470 @@
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap… )layer(init);
 
 
-    @layer init {
+@layer init {
 
-        :root {
+    :root {
 
-            /*DEFINICE PROMĚNNÝCH BAREV*/
+        /*DEFINICE PROMĚNNÝCH BAREV*/
 
-            --color-scheme: light dark;
+        --color-scheme: light dark;
 
-            --header-bg-color: light-dark(#3B3E40, #3B3E40);
+        --header-bg-color: light-dark(#3B3E40, #3B3E40);
 
-            --header-text-color: light-dark(#fff, #fff);
+        --header-text-color: light-dark(#fff, #fff);
 
-            --primary-color: light-dark(#66D4D4, #2b5a5a);
+        --primary-color: light-dark(#66D4D4, #2b5a5a);
 
-            --secondary-color: light-dark(#ffffff, #000000);
+        --secondary-color: light-dark(#ffffff, #000000);
 
-            --text-color: light-dark(#000000, #ffffff);
+        --text-color: light-dark(#000000, #ffffff);
 
-            --text-color-primary: light-dark(#ffffff, #ffffff);
+        --text-color-primary: light-dark(#ffffff, #ffffff);
 
-            --bg-color: light-dark(#ffffff, #000000);
-
-        }
-
-        html {
-
-            font-family: 'Open Sans', 'Sans-serif';
-
-            font-size: 100%;
-
-            color: var(--text-color);
-
-            scroll-behavior: smooth;
-
-        }
+        --bg-color: light-dark(#ffffff, #000000);
 
     }
 
-    @layer design {
+    html {
 
-        /*PŘÍMO HTML TAGY*/
+        font-family: 'Open Sans', 'Sans-serif';
 
-        body {
+        font-size: 100%;
 
-            background-color: var(--bg-color);
+        color: var(--text-color);
 
-        }
-
-        main {
-
-            margin: 0 auto;
-
-            padding: 1rem;
-
-            max-width: 960px;
-
-        }
-
-        h1 {
-
-            font-size: 4rem;
-            /* 60px default, 1rem = 16px*/
-
-            font-weight: 800;
-
-            font-style: bold;
-
-        }
-
-        .heading--h1 {
-
-            font-size: calc(1em + 2vw);
-
-            margin: 0;
-
-        }
-
-        .heading--h3 {
-
-            font-size: 1.125em;
-
-        }
-
-        .heading--bigger2x {
-
-            font-size: 2em;
-
-        }
-
-        h2 {
-
-            font-weight: 700;
-
-            font-size: 36px;
-
-        }
-
-        p {
-
-            font-size: 18px;
-
-            line-height: 1.35;
-
-        }
-
-        /*RESPONZIVNÍ OBRÁZKY*/
-
-        .img-fluid {
-
-            width: 100%;
-
-            display: block;
-
-            height: auto;
-
-        }
-
-        .img-block {
-
-            margin: 0;
-
-        }
-
-        .img-block__caption {
-
-            text-align: center;
-
-            margin-top: 1rem;
-
-        }
-
-        /*HEADER SEKCE*/
-
-        .header {
-
-            background-image: url('../images/header-2560w.webp');
-
-            background-size: cover;
-
-            background-position: top left;
-
-            background-color: var(--header-bg-color);
-
-            color: var(--header-text-color);
-
-            line-height: 1.5;
-
-            padding: 1em;
-
-        }
-
-        .header__nav {
-
-            margin-top: 2rem;
-
-            text-align: center;
-
-        }
-
-        .header__intro {
-
-            margin-top: 10vh;
-
-            margin-bottom: 4vh;
-
-            margin-left: 9vh;
-
-        }
-
-        .header__text {
-
-            width: 800px;
-
-            font-size: 18px;
-
-            line-height: 1.35;
-
-        }
-
-        .header__image {
-
-            width: 4.5rem;
-
-            height: auto;
-
-        }
-
-        /*DRUHY TLAČÍTEK A STYLY*/
-
-        .button {
-
-            display: inline-block;
-
-            margin-top: 1rem;
-
-            padding: 1em 2em;
-
-            border-radius: 0.5rem;
-
-        }
-
-        .button--light {
-
-            background-color: var(--bg-color);
-
-            color: var(--text-color);
-
-            text-decoration: none;
-
-            font-weight: bolder;
-
-        }
-
-        .button--light:hover {
-
-            background-color:#a7a7a7;
-
-            color: var(--text-color);
-
-            text-decoration: none;
-
-            font-weight: bolder;
-
-        }
-
-        .button--primary {
-
-            background-color: var(--primary-color);
-
-            color: var(--text-color-primary);
-
-            text-decoration: none;
-
-            font-weight: bolder;
-
-        }
-
-        .button--primary:hover {
-
-            background-color:#4c9494;
-
-            color: var(--text-color-primary);
-
-            text-decoration: none;
-
-            font-weight: bolder;
-
-        }
-
-        /*INFOBLOCK - TYRKYSOVÝ RÁMEČEK*/
-
-        .infoblock {
-
-            color: var(--text-color);
-
-            margin: 0;
-
-            padding: 1.25rem;
-
-            margin-top: 3rem;
-
-            border-style:solid;
-
-            border-color: var(--primary-color);
-
-            border-width: 4px;
-
-        }
-
-        .infoblock__title {
-
-            padding-left: 1rem;
-
-            font-weight: 700;
-
-            font-size: 20px;
-
-        }
-
-        .infoblock__body {
-
-            padding-left: 1rem;
-
-            font-size: 18px;
-
-            line-height: 1.35;
-
-        }
-
-        /*FEATURES - REŽIMY A SEZNAM UL*/
-
-        .features {
-
-            margin-top: 3rem;
-
-        }
-
-        .features__title {
-
-            font-weight: 700;
-
-            font-size: 20px;
-
-        }
-
-        .features__list__item {
-
-            margin-bottom: 1em;
-
-            font-size: 18px;
-
-        }
-
-        .features__list__item::marker {
-            /*takovýto zápis je správný, marker se mění pouze nazev_polozky_seznamu::marker*/
-
-            color: var(--primary-color);
-
-            font-size: 1.5em;
-
-        }
-
-        /*PROVEDENÍ - DVĚ VARIANTY DRONU K ZAKOUPENÍ*/
-
-        .provedeni__big {
-
-            margin-top: 6rem;
-
-        }
-
-        .provedeni {
-
-            max-width: 20rem;
-            /*délka bloku se neurčuje v pixelech, ale v rem*/
-
-            display: inline-block;
-
-            padding: 1em;
-
-            margin-top: 1rem;
-
-            vertical-align: top;
-
-        }
-
-        .provedeni__subtitle {
-
-            font-weight: 700;
-
-            font-size: 18px;
-
-        }
-
-        /*INFOBLOCK--DOWN - ŠEDÝ BANNER MINI TO THE MAX*/
-
-        .infoblock--down {
-
-            background-color: var(--header-bg-color);
-
-            color: var(--secondary-color);
-
-            text-align: center;
-
-            margin-top: 4rem;
-
-            padding-top: 3rem;
-
-            padding-bottom: 3rem;
-
-            border-style: none;
-
-        }
-
-        .infoblock__title--down {
-
-            font-weight: 700;
-
-        }
-
-        .infoblock__body--down {
-
-            margin: 0;
-
-        }
-
-        .infoblock__footer--down {
-
-            margin-top: 1rem;
-
-        }
-
-        /*GALERIE - OBRÁZKY*/
-
-        .galerie {
-
-            margin-top: 6rem;
-
-        }
-
-        .galerie__row1 {
-
-            width:100%;
-
-        }
-
-        .galerie__row1 img {
-
-            width: 100%;
-
-            height: auto;
-
-        }
-
-        .galerie__row2 {
-
-            margin-top: 1rem;
-
-            display: grid;
-
-            grid-template-columns: 1fr 1fr;
-
-            gap: 1rem;
-
-        }
-
-        .galerie__row2 img {
-
-            width: 100%;
-
-            height: auto;
-
-        }
-
-        /*FOOTER - KONEC*/
-
-        .footer {
-
-            background-color: var(--header-bg-color);
-
-            margin-top: 3rem;
-
-            padding: 3rem;
-
-            text-align: center;
-
-        }
-
-        .footer__link {
-
-            color: var(--header-text-color);
-
-            text-decoration: none;
-
-        }
+        scroll-behavior: smooth;
 
     }
+
+}
+
+@layer design {
+
+    /*PŘÍMO HTML TAGY*/
+
+    body {
+
+        background-color: var(--bg-color);
+
+    }
+
+    main {
+
+        margin: 0 auto;
+
+        padding: 1rem;
+
+        max-width: 960px;
+
+    }
+
+    h1 {
+
+        font-size: 4rem;
+        /* 60px default, 1rem = 16px*/
+
+        font-weight: 800;
+
+        font-style: bold;
+
+    }
+
+    .heading--h1 {
+
+        font-size: calc(1em + 2vw);
+
+        margin: 0;
+
+    }
+
+    .heading--h3 {
+
+        font-size: 1.125em;
+
+    }
+
+    .heading--bigger2x {
+
+        font-size: 2em;
+
+    }
+
+    h2 {
+
+        font-weight: 700;
+
+        font-size: 36px;
+
+    }
+
+    p {
+
+        font-size: 18px;
+
+        line-height: 1.35;
+
+    }
+
+    /*RESPONZIVNÍ OBRÁZKY*/
+
+    .img-fluid {
+
+        width: 100%;
+
+        display: block;
+
+        height: auto;
+
+    }
+
+    .img-block {
+
+        margin: 0;
+
+    }
+
+    .img-block__caption {
+
+        text-align: center;
+
+        margin-top: 1rem;
+
+    }
+
+    /*HEADER SEKCE*/
+
+    .header {
+
+        background-image: url('../images/header-2560w.webp');
+
+        background-size: cover;
+
+        background-position: top left;
+
+        background-color: var(--header-bg-color);
+
+        color: var(--header-text-color);
+
+        line-height: 1.5;
+
+        padding: 1em;
+
+    }
+
+    .header__nav {
+
+        margin-top: 2rem;
+
+        text-align: center;
+
+    }
+
+    .header__intro {
+
+        margin-top: 10vh;
+
+        margin-bottom: 4vh;
+
+        margin-left: 9vh;
+
+    }
+
+    .header__text {
+
+        width: 800px;
+
+        font-size: 18px;
+
+        line-height: 1.35;
+        
+        width: auto;
+
+    }
+
+    .header__image {
+
+        width: 4.5rem;
+
+        height: auto;
+
+    }
+
+    /*DRUHY TLAČÍTEK A STYLY*/
+
+    .button {
+
+        display: inline-block;
+
+        margin-top: 1rem;
+
+        padding: 1em 2em;
+
+        border-radius: 0.5rem;
+
+    }
+
+    .button--light {
+
+        background-color: var(--bg-color);
+
+        color: var(--text-color);
+
+        text-decoration: none;
+
+        font-weight: bolder;
+
+    }
+
+    .button--light:hover {
+
+        background-color: #a7a7a7;
+
+        color: var(--text-color);
+
+        text-decoration: none;
+
+        font-weight: bolder;
+
+    }
+
+    .button--primary {
+
+        background-color: var(--primary-color);
+
+        color: var(--text-color-primary);
+
+        text-decoration: none;
+
+        font-weight: bolder;
+
+    }
+
+    .button--primary:hover {
+
+        background-color: #4c9494;
+
+        color: var(--text-color-primary);
+
+        text-decoration: none;
+
+        font-weight: bolder;
+
+    }
+
+    /*INFOBLOCK - TYRKYSOVÝ RÁMEČEK*/
+
+    .infoblock {
+
+        color: var(--text-color);
+
+        margin: 0;
+
+        padding: 1.25rem;
+
+        margin-top: 3rem;
+
+        border-style: solid;
+
+        border-color: var(--primary-color);
+
+        border-width: 4px;
+
+    }
+
+    .infoblock__title {
+
+        padding-left: 1rem;
+
+        font-weight: 700;
+
+        font-size: 20px;
+
+    }
+
+    .infoblock__body {
+
+        padding-left: 1rem;
+
+        font-size: 18px;
+
+        line-height: 1.35;
+
+    }
+
+    /*FEATURES - REŽIMY A SEZNAM UL*/
+
+    .features {
+
+        margin-top: 3rem;
+
+    }
+
+    .features__title {
+
+        font-weight: 700;
+
+        font-size: 20px;
+
+    }
+
+    .features__list__item {
+
+        margin-bottom: 1em;
+
+        font-size: 18px;
+
+    }
+
+    .features__list__item::marker {
+        /*takovýto zápis je správný, marker se mění pouze nazev_polozky_seznamu::marker*/
+
+        color: var(--primary-color);
+
+        font-size: 1.5em;
+
+    }
+
+    /*PROVEDENÍ - DVĚ VARIANTY DRONU K ZAKOUPENÍ*/
+
+    .provedeni__big {
+
+        margin-top: 6rem;
+
+    }
+
+    .provedeni {
+
+        max-width: 20rem;
+        /*délka bloku se neurčuje v pixelech, ale v rem*/
+
+        display: inline-block;
+
+        padding: 1em;
+
+        margin-top: 1rem;
+
+        vertical-align: top;
+
+    }
+
+    .provedeni__subtitle {
+
+        font-weight: 700;
+
+        font-size: 18px;
+
+    }
+
+    /*INFOBLOCK--DOWN - ŠEDÝ BANNER MINI TO THE MAX*/
+
+    .infoblock--down {
+
+        background-color: var(--header-bg-color);
+
+        color: var(--secondary-color);
+
+        text-align: center;
+
+        margin-top: 4rem;
+
+        padding-top: 3rem;
+
+        padding-bottom: 3rem;
+
+        border-style: none;
+
+    }
+
+    .infoblock__title--down {
+
+        font-weight: 700;
+
+    }
+
+    .infoblock__body--down {
+
+        margin: 0;
+
+    }
+
+    .infoblock__footer--down {
+
+        margin-top: 1rem;
+
+    }
+
+    /*GALERIE - OBRÁZKY*/
+
+    .galerie {
+
+        margin-top: 6rem;
+
+    }
+
+    .galerie__row1 {
+
+        width: 100%;
+        
+        max-width: 100%;
+        
+        height: auto;
+        
+        min-width: 0;
+    }
+
+    .galerie__row1 img {
+
+        width: 100%;
+        
+        height: auto;
+        
+        display: block;
+
+    }
+
+    .galerie__row2 {
+
+        margin-top: 1rem;
+
+        display: grid;
+
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+        gap: 1rem;
+
+    }
+
+    .galerie__row2 img {
+
+        width: 100%;
+        
+        display: block;
+        
+        height: auto;
+
+    }
+
+    /*FOOTER - KONEC*/
+
+    .footer {
+
+        background-color: var(--header-bg-color);
+
+        margin-top: 3rem;
+
+        padding: 3rem;
+
+        text-align: center;
+
+    }
+
+    .footer__link {
+
+        color: var(--header-text-color);
+
+        text-decoration: none;
+
+    }
+
+}
